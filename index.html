@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Video</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        #video, #image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="video" autoplay muted>
+        <source src="loading_screen_naruto_video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <img id="image" src="earlyacesss.webp" alt="Loading Screen">
+
+    <script>
+        const video = document.getElementById('video');
+        const image = document.getElementById('image');
+
+        video.addEventListener('ended', () => {
+            video.style.display = 'none';
+            image.style.display = 'block';
+        });
+    </script>
+
+
+</body>
+</html>
