@@ -12,15 +12,20 @@
             height: 100%;
             overflow: hidden;
             background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #video, #image {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
             object-fit: cover;
+            object-position: center;
         }
 
         #image {
@@ -35,7 +40,7 @@
         Your browser does not support the video tag.
     </video>
 
-    <img id="image" src="loadingscreen_konoha.webp" alt="Loading Screen">
+    <img id="image" src="loadingscreen_suna.webp" alt="Loading Screen">
 
     <script>
         const video = document.getElementById('video');
@@ -46,7 +51,6 @@
             image.style.display = 'block';
         });
     </script>
-
 
 </body>
 </html>
